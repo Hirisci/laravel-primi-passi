@@ -1,0 +1,50 @@
+body {
+    max-width: 60rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+li {
+    position: relative;
+}
+
+li::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: rgba(50, 205, 50, 0.431);
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 1rem;
+}
+
+li.active::after {
+    top: 0;
+}
+
+a:active,
+a:visited,
+a {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 1rem;
+}
